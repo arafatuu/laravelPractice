@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\UserformController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +30,7 @@ Route::view('contact','contact');
 Route::get("users/{user}",[Users::class,"index"]);
 
 Route::get('user',[UserController::Class,"viewLoad"]);
+
+Route::post('userform', [UserformController::class,"getData"]);
+Route::view('login','userform');
+
