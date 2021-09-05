@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::view('about','about');
 Route::view('contact','contact');
 
 Route::get("users/{user}",[Users::class,"index"]);
+
+Route::get('user',[UserController::Class,"viewLoad"]);
