@@ -23,6 +23,7 @@
 <h3>{{$user}}</h3>
 @endforeach
 
+
 @csrf
 <!--JS-->
 <script>
