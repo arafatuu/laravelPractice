@@ -1,0 +1,1 @@
+<h2>This page is outside of middleware</h2>

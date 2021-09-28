@@ -19,6 +19,12 @@ Route::get('/', function () {
 });
 
 
-route::view('/home', 'home');
-route::view('/noaccess', 'noaccess');
+Route::view('/noaccess', 'noaccess');
+Route::view('/out', 'outsideofmw');
+
+Route::group(['middleware'=>['groupMiddlewareExample']], function (){
+
+    Route::view('/home', 'home');
+});
+
 
