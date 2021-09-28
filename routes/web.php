@@ -18,13 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::view('/home', 'home')->middleware('routeMiddleware');
+Route::view('/ano', 'another')->middleware('routeMiddleware');
 Route::view('/noaccess', 'noaccess');
 Route::view('/out', 'outsideofmw');
 
-Route::group(['middleware'=>['groupMiddlewareExample']], function (){
 
-    Route::view('/home', 'home');
-});
 
 
