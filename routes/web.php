@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mycontroller;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AnotherController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,5 @@ use App\Http\Controllers\Mycontroller;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/users',[UserController::class,'getData']);
+Route::get('/another',[UserController::class,'getAnotherData']);
