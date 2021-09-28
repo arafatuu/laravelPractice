@@ -17,3 +17,8 @@ use App\Http\Controllers\Mycontroller;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+route::view('/home', 'home');
+route::view('/noaccess', 'noaccess');
+
