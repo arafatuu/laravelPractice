@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Users;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserformController;
+use App\Http\Controllers\Mycontroller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,19 +17,3 @@ use App\Http\Controllers\UserformController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/greetings', function(){
-    return view('greetings');
-});
-
-
-Route::view('about','about');
-Route::view('contact','contact');
-
-Route::get("users/{user}",[Users::class,"index"]);
-
-Route::get('user',[UserController::Class,"viewLoad"]);
-
-Route::post('userform', [UserformController::class,"getData"]);
-Route::view('login','userform');
-

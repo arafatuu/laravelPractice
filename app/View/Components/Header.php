@@ -4,17 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Header extends Component
+class header extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public $titleName;
+    public $user;
     public function __construct($data)
     {
-        $this->titleName  =$data;
+       $this->user = $data;
     }
 
     /**
@@ -27,5 +27,3 @@ class Header extends Component
         return view('components.header');
     }
 }
-//ok
-

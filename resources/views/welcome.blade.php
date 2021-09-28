@@ -1,10 +1,28 @@
-<h1>Hey, This is Arafat Rahman</h1>
-<a href="/greetings">Grereting message</a>
-<a href="/about">About Us</a>
-<a href="/contact">Contact Us</a>
-<ul>
-    <li>
-        <h3><a href="/user" style="text-decoration:none"><span style="color:blue">ConditionalLogic </span> , <span style="color:red">Loops</span> , <span style="color:skyblue">includeAnotherView</span> , <span style="color:blue">Js </span> ... etc....</a></h3>
+<x-header data="Arafat"/>
+<h2>Hello Bangladesh!</h2>
+
+<h3>Global Middleware</h3>
+<li>It provides a conveninet
+     machanism  for inspecting and filtering HTTP
+     request entering an application <strong>for a group for specific pages</strong></li>
+
+
+
+     <h3>How to set up a group middleware </h3>
+    <li><strong>In route Route::view('','')->middleware(['routeMiddlewareName1,routeMiddlewareName1']);</strong></li>
+    <li>php artisna make:middleware AgeCheck</li>
+    <li>Go to <strong>App\Http\Middleware\AgeCheck</strong></li>
+    <li>Set the condition in handle function</li>
+    <li>Go to <strong>App\Http\Kernel</strong></li>
+    <li>Set the path of our created middleware into rotue middleware  like 'routeMiddlewareName1'=>\App\.....\AgeCheck</li>
+     <li>We create a middleware named AgeCheck which is responsible to check age of users. 
+         if the user is 18+ then access webpage otherwise not!
+     </li>
+     <li>to check: <li>root/pagename/?age=17</li>
+     <li>root/pagename/?age=20</li>
     </li>
-</ul>
+
+
+
+
 <!--OK-->
