@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mycontroller;
+use App\Http\Controllers\HttpClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,5 @@ use App\Http\Controllers\Mycontroller;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('api', [HttpClientController::class, 'getHttpData']);
