@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mycontroller;
+use App\Http\Controllers\UploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,6 @@ use App\Http\Controllers\Mycontroller;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('file','upload');
+Route::post('uploaded',[UploadController::class, 'fileUp']);
