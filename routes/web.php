@@ -20,5 +20,6 @@ Route::get('/', function () {
 
 
 Route::view('add', 'form');
-Route::post('add', [UserController::class, 'addMembers']);
+Route::get('list', [UserController::class, 'list']);
+Route::get('delete/{id}', [UserController::class, 'delete']);
 

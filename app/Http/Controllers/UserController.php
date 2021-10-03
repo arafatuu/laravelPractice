@@ -21,4 +21,15 @@ class UserController extends Controller
         return redirect('add');
 
     }
+
+    public function list(){
+        $data = User::all();
+        return view('list', ['members'=>$data]);
+    }
+
+    public function delete($id){
+        $data = User::find($id);
+        $data->delete();
+        return redirect('list');
+    }
 }
