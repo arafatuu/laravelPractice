@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Mycontroller;
+use App\Http\Controllers\Join;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +17,4 @@ use App\Http\Controllers\Mycontroller;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('join', [Join::class, 'show']);
