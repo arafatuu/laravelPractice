@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Mycontroller;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +17,8 @@ use App\Http\Controllers\Mycontroller;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::view('add', 'form');
+Route::post('add', [UserController::class, 'addMembers']);
+
