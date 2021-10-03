@@ -22,3 +22,5 @@ Route::get('/', function () {
 });
 Route::get('/users',[UserController::class,'getData']);
 Route::get('/another',[UserController::class,'getAnotherData']);
+
+Route::get('/pagination', [UserController::class, 'getThrowModel']);
