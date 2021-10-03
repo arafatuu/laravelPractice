@@ -24,12 +24,27 @@ class UserController extends Controller
 
     public function list(){
         $data = User::all();
-        return view('list', ['members'=>$data]);
+        return view('list', ['members'=>$data]); 
     }
 
     public function delete($id){
         $data = User::find($id);
         $data->delete();
         return redirect('list');
+    }
+    public function showData($id){
+        $data = User::find($id);
+        return view('editpage',['item'=>$data]);
+    }
+    public function update(Request $req){
+        $data = User::find($req->id);
+        $data->name=$req->name;
+        $data->email=$req->email;
+        $data->password=$req->password;
+
+        $data->save();
+
+        return redirect('list');
+
     }
 }

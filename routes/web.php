@@ -22,4 +22,7 @@ Route::get('/', function () {
 Route::view('add', 'form');
 Route::get('list', [UserController::class, 'list']);
 Route::get('delete/{id}', [UserController::class, 'delete']);
+Route::get('edit/{id}', [UserController::class, 'showData']);
+Route::post('edit', [UserController::class, 'update']);
+//Route::view('editpage', 'editpage');
 
